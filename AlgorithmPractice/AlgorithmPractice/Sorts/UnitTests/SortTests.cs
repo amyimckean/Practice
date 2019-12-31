@@ -13,6 +13,9 @@ namespace AlgorithmPractice.Sorts.UnitTests
 
         [DataRow(SortType.BubbleSort, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 }, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 })]
         [DataRow(SortType.BubbleSort, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4}, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 })]
+        [DataRow(SortType.SelectionSort, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 }, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 })]
+        [DataRow(SortType.SelectionSort, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 }, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 })]
+
         [DataTestMethod]
         public void TestSortSuccess(SortType sortType, int[] arr1, int[] arr2)
         {
@@ -25,6 +28,9 @@ namespace AlgorithmPractice.Sorts.UnitTests
 
         [DataRow(SortType.BubbleSort, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 }, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 })]
         [DataRow(SortType.BubbleSort, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 }, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 })]
+        [DataRow(SortType.SelectionSort, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 }, new[] { 1, 4, 3, 7, 91, 83, 74, 60, 100, 31 })]
+        [DataRow(SortType.SelectionSort, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 }, new[] { 12, 1, 33, 2, 91, 83, 74, 60, 98, 34, 4 })]
+
         [DataTestMethod]
         public void TestRecursiveSortSuccess(SortType sortType, int[] arr1, int[] arr2)
         {
@@ -41,6 +47,8 @@ namespace AlgorithmPractice.Sorts.UnitTests
             {
                 case SortType.BubbleSort:
                     return new BubbleSort();
+                case SortType.SelectionSort:
+                    return new SelectionSort();
                 default:
                     return new BubbleSort();
             }
@@ -49,7 +57,8 @@ namespace AlgorithmPractice.Sorts.UnitTests
 
     public enum SortType
     {
-        BubbleSort
+        BubbleSort,
+        SelectionSort
     }
 }
     

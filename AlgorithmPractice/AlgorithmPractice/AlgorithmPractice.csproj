@@ -62,6 +62,7 @@
     <Compile Include="Searches\UnitTests\SearchTests.cs" />
     <Compile Include="Sorts\BubbleSort.cs" />
     <Compile Include="Sorts\ISort.cs" />
+    <Compile Include="Sorts\SelectionSort.cs" />
     <Compile Include="Sorts\UnitTests\SortTests.cs" />
   </ItemGroup>
   <ItemGroup>
